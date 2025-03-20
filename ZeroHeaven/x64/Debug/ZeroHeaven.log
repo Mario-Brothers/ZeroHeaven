@@ -1,1 +1,5 @@
-﻿LINK : fatal error LNK1104: nie można otworzyć pliku „SDL3.lib”
+﻿  Init.cpp
+  main.cpp
+  Generowanie kodu...
+C:\Users\cyran\source\repos\Mario-Brothers\ZeroHeaven\ZeroHeaven\Init.cpp(39,1): warning C4715: "InitEverything”: niewszystkie ścieżki kodu zwracają wartość
+LINK : fatal error LNK1104: nie można otworzyć pliku „SDL3.lib”
