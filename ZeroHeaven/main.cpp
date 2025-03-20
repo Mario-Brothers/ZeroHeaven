@@ -10,6 +10,7 @@ static SDL_GLContext glContext = nullptr;
 SDL_AppResult SDL_AppInit(void **appstate, int argc, char** argv)
 {
 	InitEverything(renderer, window, glContext);
+	//test commit do wyjebania
 
 	return SDL_APP_CONTINUE;
 }
