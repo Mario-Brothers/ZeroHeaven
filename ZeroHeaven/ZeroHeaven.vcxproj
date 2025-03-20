@@ -112,7 +112,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir)lib\SDL3-devel-3.2.0-VC\SDL3-3.2.0\include;$(ProjectDir)lib\glew-2.2.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)lib\SDL3-devel-3.2.0-VC\SDL3-3.2.0\include;$(ProjectDir)lib\glew-2.2.0\include;</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
@@ -120,8 +120,8 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>C:\lib\glew-2.1.0\lib\Release\x64;C:\lib\SDL3-devel-3.2.0-VC\SDL3-3.2.0\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>glew32.lib;glew32s.lib;SDL3.lib;SDL3_test.lib;opengl32.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>$(ProjectDir)lib\glew-2.2.0\lib\Release\x64;$(ProjectDir)lib\SDL3-devel-3.2.0-VC\SDL3-3.2.0\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>SDL3.lib;SDL3_test.lib;glew32.lib;glew32s.lib;glu32.lib;opengl32.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(ProjectDir)lib\SDL3-devel-3.2.0-VC\SDL3-3.2.0\lib\x64;$(ProjectDir)lib\glew-2.2.0\lib\Release\x64</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL3.lib;SDL3_test.lib;glew32.lib;glew32s.lib;opengl32.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -140,8 +140,8 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(ProjectDir)lib\SDL3-devel-3.2.0-VC\SDL3-3.2.0\lib\x64;$(ProjectDir)lib\glew-2.2.0\lib\Release\x64;</AdditionalLibraryDirectories>
-      <AdditionalDependencies>SDL3.lib;SDL3_test.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(ProjectDir)lib\SDL3-devel-3.2.0-VC\SDL3-3.2.0\lib\x64;$(ProjectDir)lib\glew-2.2.0\lib\Release\x64</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL3.lib;SDL3_test.lib;glew32.lib;glew32s.lib;opengl32.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>

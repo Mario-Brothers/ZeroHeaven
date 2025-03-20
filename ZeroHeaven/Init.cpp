@@ -1,11 +1,5 @@
 #include "Init.hpp"
 
-#include <GL/glew.h>
-#include <GL/GL.h>
-#include <SDL3/SDL.h>
-#include <SDL3/SDL_init.h>
-#include <SDL3/SDL_opengl.h>
-
 SDL_AppResult InitEverything(SDL_Renderer* renderer, SDL_Window* window, SDL_GLContext glContext)
 {
     if (!SDL_Init(SDL_INIT_VIDEO))
@@ -36,4 +30,6 @@ SDL_AppResult InitEverything(SDL_Renderer* renderer, SDL_Window* window, SDL_GLC
         SDL_Log("Error initializing GLEW");
         return SDL_APP_FAILURE;
     }
+
+    return SDL_APP_CONTINUE;
 }
