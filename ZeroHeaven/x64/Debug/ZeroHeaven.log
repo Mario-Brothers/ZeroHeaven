@@ -1,0 +1,4 @@
+﻿  Init.cpp
+F:\repos\Mario-Brothers\ZeroHeaven\ZeroHeaven\Init.cpp(39,1): warning C4715: "InitEverything”: niewszystkie ścieżki kodu zwracają wartość
+  LINK : nie znaleziono elementu F:\repos\Mario-Brothers\ZeroHeaven\x64\Debug\ZeroHeaven.exe ani nie został on skompilowany podczas ostatniego konsolidowania przyrostowego; zostanie wykonana pełna konsolidacja
+  ZeroHeaven.vcxproj -> F:\repos\Mario-Brothers\ZeroHeaven\x64\Debug\ZeroHeaven.exe
