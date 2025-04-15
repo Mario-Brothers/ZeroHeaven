@@ -11,7 +11,7 @@ DEBUG_FLAGS   := -Wall -Wextra -std=c++17 -g
 RELEASE_FLAGS := -Wall -Wextra -std=c++17 -O2
 
 # Ścieżki źródłowe
-SRC_DIRS := src/cpp engine graphics audio
+SRC_DIRS := src/cpp src/cpp/player
 TEST_DIR := tests
 
 INCLUDES := -I/usr/local/include/SDL3

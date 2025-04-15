@@ -35,15 +35,7 @@ SDL_AppResult SDL_AppEvent(void *appstate, SDL_Event *event)
 
 SDL_AppResult SDL_AppIterate(void *appstate)
 {
-    SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
-    SDL_RenderClear(renderer);
     
-    SDL_SetRenderDrawColor(renderer, 255, 0, 0, 255);
-    
-    SDL_RenderLine(renderer, 0, 0, WINDOW_WIDTH, WINDOW_HEIGHT);
-    SDL_RenderLine(renderer, 0, WINDOW_HEIGHT, WINDOW_WIDTH, 0);
-    
-    SDL_RenderPresent(renderer);
 
     return SDL_APP_CONTINUE;
 }
