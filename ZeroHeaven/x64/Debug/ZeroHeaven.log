@@ -1,6 +1,0 @@
-<<<<<<< HEAD
-﻿  Init.cpp
-  ZeroHeaven.vcxproj -> C:\Users\cyran\source\repos\Mario-Brothers\ZeroHeaven\x64\Debug\ZeroHeaven.exe
-=======
-﻿LINK : fatal error LNK1104: nie można otworzyć pliku „glew32.lib”
->>>>>>> 2a1456e8c54efebf75c80ae7ca2270f6a41ab9d9
