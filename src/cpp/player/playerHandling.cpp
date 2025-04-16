@@ -8,15 +8,15 @@ void handlePlayerMovement(SDL_Event* event, Player* player)
         switch (event->key.scancode)
         {
             case SDL_SCANCODE_LEFT:
-                player->setMovingLeft(true);
+                player->setMovingLeft(true); // Set the moving left flag
                 break;
 
             case SDL_SCANCODE_RIGHT:
-                player->setMovingRight(true);
+                player->setMovingRight(true); // Set the moving right flag
                 break;
 
             case SDL_SCANCODE_SPACE:
-                player->jump();
+                player->jump(); // Make the player jump
                 break;
 
             default:
@@ -29,11 +29,11 @@ void handlePlayerMovement(SDL_Event* event, Player* player)
         switch (event->key.scancode)
         {
             case SDL_SCANCODE_LEFT:
-                player->setMovingLeft(false);
+                player->setMovingLeft(false); // Set the moving left flag to false
                 break;
 
             case SDL_SCANCODE_RIGHT:
-                player->setMovingRight(false);
+                player->setMovingRight(false); // Set the moving right flag to false
                 break;
 
             case SDL_SCANCODE_SPACE:

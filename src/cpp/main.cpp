@@ -15,11 +15,11 @@ Player *player = nullptr;
 
 float WINDOW_WIDTH;
 float WINDOW_HEIGHT;
-float lastTime = SDL_GetTicks() / 1000.0f;
+float lastTime = SDL_GetTicks() / 1000.0f; // Last frame time
 
 SDL_AppResult SDL_AppInit(void **appstate, int argc, char* argv[])
 {
-    if (initEverything(window, renderer, appstate, player) == SDL_APP_FAILURE)
+    if (initEverything(window, renderer, appstate, player) == SDL_APP_FAILURE) // 
     {
         return SDL_APP_FAILURE;
     }
@@ -34,23 +34,23 @@ SDL_AppResult SDL_AppEvent(void *appstate, SDL_Event *event)
 
 SDL_AppResult SDL_AppIterate(void *appstate)
 {
-    float currentTime = SDL_GetTicks() / 1000.0f;
-    float deltaTime = currentTime - lastTime;
-    lastTime = currentTime;
+    float currentTime = SDL_GetTicks() / 1000.0f; // Get current time
+    float deltaTime = currentTime - lastTime; // Calculate delta time
+    lastTime = currentTime; // Update last time
 
-    player->update(deltaTime);
+    player->update(deltaTime); // Update player state
 
     SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255); // Set the draw color to white
-    SDL_RenderClear(renderer);
+    SDL_RenderClear(renderer); // Clear the screen
 
-    player->renderPlayer(renderer);
+    player->renderPlayer(renderer); // Render the player
 
-    SDL_RenderPresent(renderer);
+    SDL_RenderPresent(renderer); // Present the renderer
 
     return SDL_APP_CONTINUE;  /* carry on with the program! */
 }
 
 void SDL_AppQuit(void *appstate, SDL_AppResult result)
 {
-
+    // Fuck you mother
 }

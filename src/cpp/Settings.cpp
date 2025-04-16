@@ -7,6 +7,7 @@ std::vector<Resolution> getResolution()
 
     int i, num_displays = 0; // Number of displays
     SDL_DisplayID *displays = SDL_GetDisplays(&num_displays); // Get displays
+    
     if(displays)
     {
         for(i = 0; i < num_displays; ++i) // Iterate through displays
@@ -22,6 +23,7 @@ std::vector<Resolution> getResolution()
     SDL_DisplayID display = SDL_GetPrimaryDisplay(); // Get primary display
     int num_modes = 0; // Number of modes
     SDL_DisplayMode **modes = SDL_GetFullscreenDisplayModes(display, &num_modes); // Get display modes
+
     if (modes)  
     {
         Resolution res; // Resolution struct
