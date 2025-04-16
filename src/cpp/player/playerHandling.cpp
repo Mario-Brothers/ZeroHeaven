@@ -7,20 +7,16 @@ void handlePlayerMovement(SDL_Event* event, Player* player)
     {
         switch (event->key.scancode)
         {
-            case SDL_SCANCODE_UP:
-                player->moveUp();
-                break;
-            
-            case SDL_SCANCODE_DOWN:
-                player->moveDown();
-                break;
-            
             case SDL_SCANCODE_LEFT:
-                player->moveLeft();
+                player->setMovingLeft(true);
                 break;
 
             case SDL_SCANCODE_RIGHT:
-                player->moveRight();
+                player->setMovingRight(true);
+                break;
+
+            case SDL_SCANCODE_SPACE:
+                player->jump();
                 break;
 
             default:
@@ -32,18 +28,15 @@ void handlePlayerMovement(SDL_Event* event, Player* player)
     {
         switch (event->key.scancode)
         {
-            case SDL_SCANCODE_UP:
-                break;
-            
-            case SDL_SCANCODE_DOWN:
-                break;
-
             case SDL_SCANCODE_LEFT:
+                player->setMovingLeft(false);
                 break;
 
             case SDL_SCANCODE_RIGHT:
+                player->setMovingRight(false);
                 break;
 
+            case SDL_SCANCODE_SPACE:
             default:
                 break;
         }

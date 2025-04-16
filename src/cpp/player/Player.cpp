@@ -1,48 +1,93 @@
 #include "../../headers/player/Player.hpp"
 #include "../../headers/Settings.hpp"
 
-Player::Player()
+const float GRAVITY = 1000.0f; // Gravity constant
+const float JUMP_FORCE = -500.0f; // Jump velocity
+const float GROUND_Y = 500.0f; // Ground level
+
+
+
+Player::Player(float windowWidth, float windowHeight)
 {
-    playerRect.x = WINDOW_WIDTH / 2 - playerWidth / 2; // Initial x position
-    playerRect.y = WINDOW_HEIGHT / 2 - playerHeight / 2; // Initial y position
-    playerRect.w = playerWidth; // Width of the player
-    playerRect.h = playerHeight; // Height of the player
+    playerRect.w = playerWidth;
+    playerRect.h = playerHeight;
+
+    x = windowWidth / 2.0f - playerWidth / 2.0f;
+    y = windowHeight / 2.0f - playerHeight / 2.0f;
+
+    playerRect.x = static_cast<int>(x);
+    playerRect.y = static_cast<int>(y);
 }
 
 void Player::renderPlayer(SDL_Renderer* renderer)
 {
+    SDL_Log("Rendering player at position: (%f, %f)", x, y);
     SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255); // Reset color to black 
     SDL_RenderFillRect(renderer, &playerRect); // Draw the player rectangle
 }
 
-void Player::moveUp()
+void Player::update(float deltaTime)
 {
-    if (playerRect.y > 0) // Check if the player is not at the top edge
+    if (isMovingLeft)
     {
-        playerRect.y -= 5.0f; // Move up
+        moveLeft(deltaTime);
+    }
+
+    if (isMovingRight)
+    {
+        moveRight(deltaTime);
+    }
+
+    if (!isOnGround)
+    {
+        velocityY += GRAVITY * deltaTime;
+        y += velocityY * deltaTime;
+
+        if (y >= GROUND_Y)
+        {
+            y = GROUND_Y;
+            velocityY = 0;
+            isOnGround = true;
+        }
+    }
+
+    playerRect.y = static_cast<int>(y); // Update the player's y position
+}
+
+void Player::moveLeft(float deltaTime)
+{
+    if (playerRect.x > 0)
+    {
+        playerRect.x -= playerSpeed * deltaTime; // Apply smooth movement by multiplying by deltaTime
+        x = playerRect.x;
     }
 }
 
-void Player::moveDown()
+void Player::moveRight(float deltaTime)
 {
-    if (playerRect.y < WINDOW_HEIGHT - playerHeight) // Check if the player is not at the bottom edge
+    if (playerRect.x < WINDOW_WIDTH - playerWidth)
     {
-        playerRect.y += 5.0f; // Move down
+        playerRect.x += playerSpeed * deltaTime; // Apply smooth movement by multiplying by deltaTime
+        x = playerRect.x;
     }
 }
 
-void Player::moveLeft()
+void Player::jump()
 {
-    if (playerRect.x > 0) // Check if the player is not at the left edge
+    if (isOnGround) 
     {
-        playerRect.x -= 5.0f; // Move left
+        velocityY = JUMP_FORCE;
+        isOnGround = false;
     }
 }
 
-void Player::moveRight()
+void Player::setMovingLeft(bool movingLeft)
 {
-    if (playerRect.x < WINDOW_WIDTH - playerWidth) // Check if the player is not at the right edge
-    {
-        playerRect.x += 5.0f; // Move right
-    }
+    isMovingLeft = movingLeft;
 }
+
+void Player::setMovingRight(bool movingRight)
+{
+    isMovingRight = movingRight;
+}
+

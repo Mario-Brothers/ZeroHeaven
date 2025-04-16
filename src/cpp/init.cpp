@@ -37,7 +37,7 @@ SDL_AppResult initEverything(SDL_Window*& window, SDL_Renderer*& renderer, void*
         return SDL_APP_FAILURE;
     }
 
-    player = new Player();
+    player = new Player(WINDOW_WIDTH, WINDOW_HEIGHT);
     if(!player)
     {
         SDL_Log("Failed to create player object");

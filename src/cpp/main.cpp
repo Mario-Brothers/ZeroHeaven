@@ -15,6 +15,7 @@ Player *player = nullptr;
 
 float WINDOW_WIDTH;
 float WINDOW_HEIGHT;
+float lastTime = SDL_GetTicks() / 1000.0f;
 
 SDL_AppResult SDL_AppInit(void **appstate, int argc, char* argv[])
 {
@@ -33,6 +34,12 @@ SDL_AppResult SDL_AppEvent(void *appstate, SDL_Event *event)
 
 SDL_AppResult SDL_AppIterate(void *appstate)
 {
+    float currentTime = SDL_GetTicks() / 1000.0f;
+    float deltaTime = currentTime - lastTime;
+    lastTime = currentTime;
+
+    player->update(deltaTime);
+
     SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255); // Set the draw color to white
     SDL_RenderClear(renderer);
 
