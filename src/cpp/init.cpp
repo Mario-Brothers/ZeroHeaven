@@ -1,6 +1,7 @@
 #include "../headers/init.hpp"
+#include "../headers/player/Player.hpp"
 
-SDL_AppResult initEverything(SDL_Window *window, SDL_Renderer *renderer, void **appstate)
+SDL_AppResult initEverything(SDL_Window*& window, SDL_Renderer*& renderer, void** appstate, Player*& player)
 { 
     if(!SDL_Init(SDL_INIT_VIDEO))
     {
@@ -11,8 +12,8 @@ SDL_AppResult initEverything(SDL_Window *window, SDL_Renderer *renderer, void **
     std::vector<Resolution> resolutions = getResolution();
     if (!resolutions.empty())
     {
-        WINDOW_WIDTH = resolutions[0].width;
-        WINDOW_HEIGHT = resolutions[0].height;
+        WINDOW_WIDTH = resolutions[18].width;
+        WINDOW_HEIGHT = resolutions[18].height;
         SDL_Log("Ustawiono rozdzielczość okna na: %f x %f\n", WINDOW_WIDTH, WINDOW_HEIGHT);
     }
     else
@@ -22,7 +23,7 @@ SDL_AppResult initEverything(SDL_Window *window, SDL_Renderer *renderer, void **
         WINDOW_HEIGHT = 600;
     }
     
-    window = SDL_CreateWindow("game?", WINDOW_WIDTH, WINDOW_HEIGHT, SDL_WINDOW_FULLSCREEN);
+    window = SDL_CreateWindow("game?", WINDOW_WIDTH, WINDOW_HEIGHT, NULL);
     if (!window)
     {
         SDL_Log("SDL_CreateWindow failed: %s", SDL_GetError());
@@ -33,7 +34,13 @@ SDL_AppResult initEverything(SDL_Window *window, SDL_Renderer *renderer, void **
     if (!renderer)
     {
         SDL_Log("SDL_CreateRenderer failed: %s", SDL_GetError());
-        SDL_DestroyWindow(window);
+        return SDL_APP_FAILURE;
+    }
+
+    player = new Player();
+    if(!player)
+    {
+        SDL_Log("Failed to create player object");
         return SDL_APP_FAILURE;
     }
 

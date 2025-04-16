@@ -10,7 +10,6 @@ public:
    
     void renderPlayer(SDL_Renderer* renderer);
 
-
 private:
     SDL_FRect playerRect;
     float playerHeight;
