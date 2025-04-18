@@ -8,10 +8,12 @@
 #include "../headers/init.hpp"
 #include "../headers/Entity/player/Player.hpp"
 #include "../headers/event.hpp"
+#include "../headers/Camera/Camera.hpp"
 
 SDL_Renderer *renderer = nullptr;
 SDL_Window *window = nullptr;
 Player *player = nullptr;
+Camera *camera = nullptr;
 
 float WINDOW_WIDTH;
 float WINDOW_HEIGHT;
@@ -19,7 +21,7 @@ float lastTime = SDL_GetTicks() / 1000.0f; // Last frame time
 
 SDL_AppResult SDL_AppInit(void **appstate, int argc, char* argv[])
 {
-    if (initEverything(window, renderer, appstate, player) == SDL_APP_FAILURE) // 
+    if (initEverything(window, renderer, appstate, player, camera) == SDL_APP_FAILURE) // 
     {
         return SDL_APP_FAILURE;
     }
@@ -34,16 +36,19 @@ SDL_AppResult SDL_AppEvent(void *appstate, SDL_Event *event)
 
 SDL_AppResult SDL_AppIterate(void *appstate)
 {
+
     float currentTime = SDL_GetTicks() / 1000.0f; // Get current time
     float deltaTime = currentTime - lastTime; // Calculate delta time
     lastTime = currentTime; // Update last time
 
-    player->update(deltaTime); // Update player state
+    camera->update(player->pos.x, player->pos.y, player->playerWidth, player->playerHeight, deltaTime); // Update camera position
+    
+    player->update(deltaTime, camera); // Update player state
 
     SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255); // Set the draw color to white
     SDL_RenderClear(renderer); // Clear the screen
 
-    player->render(renderer); // Render the player
+    player->render(renderer, camera); // Render the player
 
     SDL_RenderPresent(renderer); // Present the renderer
 

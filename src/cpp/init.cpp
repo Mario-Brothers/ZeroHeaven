@@ -1,7 +1,9 @@
 #include "../headers/init.hpp"
 #include "../headers/Entity/player/Player.hpp"
+#include "../headers/Camera/Camera.hpp"
+#include "../headers/Map/Map.hpp"
 
-SDL_AppResult initEverything(SDL_Window*& window, SDL_Renderer*& renderer, void** appstate, Player*& player)
+SDL_AppResult initEverything(SDL_Window*& window, SDL_Renderer*& renderer, void** appstate, Player*& player, Camera*& camera)
 { 
     if(!SDL_Init(SDL_INIT_VIDEO)) // Initialize SDL
     {
@@ -41,6 +43,13 @@ SDL_AppResult initEverything(SDL_Window*& window, SDL_Renderer*& renderer, void*
     if(!player)
     {
         SDL_Log("Failed to create player object");
+        return SDL_APP_FAILURE;
+    }
+
+    camera = new Camera(WINDOW_WIDTH, WINDOW_HEIGHT, MAP_MAX_X, MAP_MAX_Y); // Create a camera object
+    if(!camera)
+    {
+        SDL_Log("Failed to create camera object");
         return SDL_APP_FAILURE;
     }
 
