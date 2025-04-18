@@ -1,5 +1,5 @@
-#include "../../headers/player/playerHandling.hpp"
-#include "../../headers/player/Player.hpp"
+#include "../../../headers/Entity/player/Player.hpp"
+#include "../../../headers/Entity/player/playerHandling.hpp"
 
 void handlePlayerMovement(SDL_Event* event, Player* player)
 {

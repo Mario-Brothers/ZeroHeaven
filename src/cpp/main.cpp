@@ -6,7 +6,7 @@
 
 #include "../headers/Settings.hpp"
 #include "../headers/init.hpp"
-#include "../headers/player/Player.hpp"
+#include "../headers/Entity/player/Player.hpp"
 #include "../headers/event.hpp"
 
 SDL_Renderer *renderer = nullptr;
@@ -43,7 +43,7 @@ SDL_AppResult SDL_AppIterate(void *appstate)
     SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255); // Set the draw color to white
     SDL_RenderClear(renderer); // Clear the screen
 
-    player->renderPlayer(renderer); // Render the player
+    player->render(renderer); // Render the player
 
     SDL_RenderPresent(renderer); // Present the renderer
 

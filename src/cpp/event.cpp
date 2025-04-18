@@ -1,5 +1,5 @@
 #include "../headers/event.hpp"
-#include "../headers/player/playerHandling.hpp"
+#include "../headers/Entity/player/playerHandling.hpp"
 
 SDL_AppResult handleEvent(SDL_Event* event, void* appstate, Player* player)
 {

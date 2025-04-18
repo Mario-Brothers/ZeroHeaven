@@ -1,5 +1,5 @@
 #include "../headers/init.hpp"
-#include "../headers/player/Player.hpp"
+#include "../headers/Entity/player/Player.hpp"
 
 SDL_AppResult initEverything(SDL_Window*& window, SDL_Renderer*& renderer, void** appstate, Player*& player)
 { 
