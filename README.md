@@ -1,4 +1,4 @@
-wyświetlanie okna - done
+1. wyświetlanie okna - done \n
 renderowanie "gracza" - done
 poruszanie się graczem - done
 prosta grawitacja, skakanie - done
