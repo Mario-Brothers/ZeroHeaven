@@ -1,14 +1,14 @@
-1. wyświetlanie okna - done \n
-renderowanie "gracza" - done
-poruszanie się graczem - done
-prosta grawitacja, skakanie - done
-kamera poruszająca się za graczem - done
-losowe renderowanie platform
-kolizja z platformami
-renderowanie przeciwników
-poruszanie się przeciwników
-renderowanie bossa
-renderowanie portalu
-generowanie nowej mapy po przejściu przez portal
+1. wyświetlanie okna - done
+2. renderowanie "gracza" - done
+3. poruszanie się graczem - done
+4. prosta grawitacja, skakanie - done
+5. kamera poruszająca się za graczem - done
+6. losowe renderowanie platform
+7. kolizja z platformami
+8. renderowanie przeciwników
+9. poruszanie się przeciwników
+10. renderowanie bossa
+11. renderowanie portalu
+12. generowanie nowej mapy po przejściu przez portal
 
 quo vadis?
