@@ -3,7 +3,7 @@
 3. poruszanie się graczem - done
 4. prosta grawitacja, skakanie - done
 5. kamera poruszająca się za graczem - done
-6. losowe renderowanie platform
+6. losowe renderowanie platform - done
 7. kolizja z platformami
 8. renderowanie przeciwników
 9. poruszanie się przeciwników
