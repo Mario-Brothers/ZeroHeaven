@@ -23,6 +23,7 @@ public:
 
     float playerHeight = 50.0f; // Player height
     float playerWidth = 50.0f; // Player width
+    float GROUND_Y; // Ground Y position
 
 private:
     SDL_FRect playerRect; // Player rectangle

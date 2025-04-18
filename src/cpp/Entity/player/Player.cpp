@@ -4,11 +4,11 @@
 
 const float GRAVITY = 1000.0f; // Gravity constant
 const float JUMP_FORCE = -500.0f; // Jump velocity
-const float GROUND_Y = 500.0f; // Ground level
 
 Player::Player(float windowWidth, float windowHeight) : Entity(Vec2(windowWidth / 2.0f, windowHeight - 50.0f))
 {
     playerRect = { pos.x, pos.y, playerWidth, playerHeight }; // Initialize player rectangle
+    GROUND_Y = windowHeight - playerHeight;
 }
 
 void Player::render(SDL_Renderer* renderer)

@@ -14,8 +14,8 @@ SDL_AppResult initEverything(SDL_Window*& window, SDL_Renderer*& renderer, void*
     std::vector<Resolution> resolutions = getResolution(); // Get available resolutions
     if (!resolutions.empty()) 
     {
-        WINDOW_WIDTH = resolutions[18].width; // Set the width of the window
-        WINDOW_HEIGHT = resolutions[18].height; // Set the height of the window
+        WINDOW_WIDTH = resolutions[0].width; // Set the width of the window
+        WINDOW_HEIGHT = resolutions[0].height; // Set the height of the window
         SDL_Log("Ustawiono rozdzielczość okna na: %f x %f\n", WINDOW_WIDTH, WINDOW_HEIGHT); 
     }
     else
@@ -25,7 +25,7 @@ SDL_AppResult initEverything(SDL_Window*& window, SDL_Renderer*& renderer, void*
         WINDOW_HEIGHT = 600; // Default height
     }
     
-    window = SDL_CreateWindow("game?", WINDOW_WIDTH, WINDOW_HEIGHT, NULL); // Create a window
+    window = SDL_CreateWindow("game?", WINDOW_WIDTH, WINDOW_HEIGHT, SDL_WINDOW_FULLSCREEN); // Create a window
     if (!window)
     {
         SDL_Log("SDL_CreateWindow failed: %s", SDL_GetError());
