@@ -1,6 +1,7 @@
 #include "../../../headers/Entity/player/Player.hpp"
 #include "../../../headers/Map/Map.hpp"
 #include "../../../headers/Camera/Camera.hpp"
+#include "../../../headers/Settings.hpp"
 
 const float GRAVITY = 1000.0f; // Gravity constant
 const float JUMP_FORCE = -500.0f; // Jump velocity

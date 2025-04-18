@@ -41,6 +41,8 @@ set(SOURCES
     ${SRC_DIRS}/main.cpp
     ${SRC_DIRS}/Settings.cpp
     ${SRC_DIRS}/Structures/Structures.cpp
+    ${SRC_DIRS}/Map/Map.cpp
+    ${SRC_DIRS}/Map/Platform.cpp
 )
 
 # =======================

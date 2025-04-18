@@ -270,6 +270,54 @@ src/cpp/Entity/player/playerHandling.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/cpp/Entity/player/playerHandling.cpp.s
 .PHONY : src/cpp/Entity/player/playerHandling.cpp.s
 
+src/cpp/Map/Map.o: src/cpp/Map/Map.cpp.o
+.PHONY : src/cpp/Map/Map.o
+
+# target to build an object file
+src/cpp/Map/Map.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/cpp/Map/Map.cpp.o
+.PHONY : src/cpp/Map/Map.cpp.o
+
+src/cpp/Map/Map.i: src/cpp/Map/Map.cpp.i
+.PHONY : src/cpp/Map/Map.i
+
+# target to preprocess a source file
+src/cpp/Map/Map.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/cpp/Map/Map.cpp.i
+.PHONY : src/cpp/Map/Map.cpp.i
+
+src/cpp/Map/Map.s: src/cpp/Map/Map.cpp.s
+.PHONY : src/cpp/Map/Map.s
+
+# target to generate assembly for a file
+src/cpp/Map/Map.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/cpp/Map/Map.cpp.s
+.PHONY : src/cpp/Map/Map.cpp.s
+
+src/cpp/Map/Platform.o: src/cpp/Map/Platform.cpp.o
+.PHONY : src/cpp/Map/Platform.o
+
+# target to build an object file
+src/cpp/Map/Platform.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/cpp/Map/Platform.cpp.o
+.PHONY : src/cpp/Map/Platform.cpp.o
+
+src/cpp/Map/Platform.i: src/cpp/Map/Platform.cpp.i
+.PHONY : src/cpp/Map/Platform.i
+
+# target to preprocess a source file
+src/cpp/Map/Platform.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/cpp/Map/Platform.cpp.i
+.PHONY : src/cpp/Map/Platform.cpp.i
+
+src/cpp/Map/Platform.s: src/cpp/Map/Platform.cpp.s
+.PHONY : src/cpp/Map/Platform.s
+
+# target to generate assembly for a file
+src/cpp/Map/Platform.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/cpp/Map/Platform.cpp.s
+.PHONY : src/cpp/Map/Platform.cpp.s
+
 src/cpp/Settings.o: src/cpp/Settings.cpp.o
 .PHONY : src/cpp/Settings.o
 
@@ -415,6 +463,12 @@ help:
 	@echo "... src/cpp/Entity/player/playerHandling.o"
 	@echo "... src/cpp/Entity/player/playerHandling.i"
 	@echo "... src/cpp/Entity/player/playerHandling.s"
+	@echo "... src/cpp/Map/Map.o"
+	@echo "... src/cpp/Map/Map.i"
+	@echo "... src/cpp/Map/Map.s"
+	@echo "... src/cpp/Map/Platform.o"
+	@echo "... src/cpp/Map/Platform.i"
+	@echo "... src/cpp/Map/Platform.s"
 	@echo "... src/cpp/Settings.o"
 	@echo "... src/cpp/Settings.i"
 	@echo "... src/cpp/Settings.s"

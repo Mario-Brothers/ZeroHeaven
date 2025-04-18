@@ -5,5 +5,6 @@
 
 class Player;
 class Camera;
+class Map;
 
-SDL_AppResult initEverything(SDL_Window*& window, SDL_Renderer*& renderer, void** appstate, Player*& player, Camera*& camera);
+SDL_AppResult initEverything(SDL_Window*& window, SDL_Renderer*& renderer, void** appstate, Player*& player, Camera*& camera, Map*& map);

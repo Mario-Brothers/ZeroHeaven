@@ -1,9 +1,11 @@
 #include "../headers/init.hpp"
 #include "../headers/Entity/player/Player.hpp"
 #include "../headers/Camera/Camera.hpp"
+#include "../headers/Settings.hpp"
 #include "../headers/Map/Map.hpp"
+#include "../headers/Map/Platform.hpp"
 
-SDL_AppResult initEverything(SDL_Window*& window, SDL_Renderer*& renderer, void** appstate, Player*& player, Camera*& camera)
+SDL_AppResult initEverything(SDL_Window*& window, SDL_Renderer*& renderer, void** appstate, Player*& player, Camera*& camera, Map*& map)
 { 
     if(!SDL_Init(SDL_INIT_VIDEO)) // Initialize SDL
     {
@@ -52,6 +54,15 @@ SDL_AppResult initEverything(SDL_Window*& window, SDL_Renderer*& renderer, void*
         SDL_Log("Failed to create camera object");
         return SDL_APP_FAILURE;
     }
+
+    map = new Map(); // Create a map object
+    if(!map)
+    {
+        SDL_Log("Failed to create map object");
+        return SDL_APP_FAILURE;
+    }
+
+    map->generatePlatforms(MAP_MIN_X, MAP_MAX_X, MAP_MIN_Y, MAP_MAX_Y, numOfPlatforms, min_platform_width, max_platform_width, min_platform_height, max_platform_height); // Generate platforms
 
     return SDL_APP_CONTINUE;
 }

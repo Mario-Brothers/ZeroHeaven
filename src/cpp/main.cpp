@@ -9,11 +9,13 @@
 #include "../headers/Entity/player/Player.hpp"
 #include "../headers/event.hpp"
 #include "../headers/Camera/Camera.hpp"
+#include "../headers/Map/Map.hpp"
 
 SDL_Renderer *renderer = nullptr;
 SDL_Window *window = nullptr;
 Player *player = nullptr;
 Camera *camera = nullptr;
+Map *map = nullptr;
 
 float WINDOW_WIDTH;
 float WINDOW_HEIGHT;
@@ -21,7 +23,7 @@ float lastTime = SDL_GetTicks() / 1000.0f; // Last frame time
 
 SDL_AppResult SDL_AppInit(void **appstate, int argc, char* argv[])
 {
-    if (initEverything(window, renderer, appstate, player, camera) == SDL_APP_FAILURE) // 
+    if (initEverything(window, renderer, appstate, player, camera, map) == SDL_APP_FAILURE) // 
     {
         return SDL_APP_FAILURE;
     }
@@ -48,6 +50,7 @@ SDL_AppResult SDL_AppIterate(void *appstate)
     SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255); // Set the draw color to white
     SDL_RenderClear(renderer); // Clear the screen
 
+    map->render(renderer, camera); // Render the map
     player->render(renderer, camera); // Render the player
 
     SDL_RenderPresent(renderer); // Present the renderer

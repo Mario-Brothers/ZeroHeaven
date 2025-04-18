@@ -157,4 +157,8 @@ CMakeFiles/app.dir/src/cpp/main.cpp.o: \
   /home/kacper/cpp/zeroheaven/src/cpp/../headers/Entity/player/../../../headers/Entity/../../headers/Structures/Structures.hpp \
   /home/kacper/cpp/zeroheaven/src/cpp/../headers/Entity/player/../../../headers/Camera/Camera.hpp \
   /home/kacper/cpp/zeroheaven/src/cpp/../headers/event.hpp \
-  /home/kacper/cpp/zeroheaven/src/cpp/../headers/Camera/Camera.hpp
+  /home/kacper/cpp/zeroheaven/src/cpp/../headers/Camera/Camera.hpp \
+  /home/kacper/cpp/zeroheaven/src/cpp/../headers/Map/Map.hpp \
+  /home/kacper/cpp/zeroheaven/src/cpp/../headers/Map/Platform.hpp \
+  /home/kacper/cpp/zeroheaven/src/cpp/../headers/Map/../../headers/Camera/Camera.hpp \
+  /home/kacper/cpp/zeroheaven/src/cpp/../headers/Map/../Camera/Camera.hpp

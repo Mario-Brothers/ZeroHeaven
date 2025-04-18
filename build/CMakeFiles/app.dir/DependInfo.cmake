@@ -12,6 +12,8 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/kacper/cpp/zeroheaven/src/cpp/Entity/Entity.cpp" "CMakeFiles/app.dir/src/cpp/Entity/Entity.cpp.o" "gcc" "CMakeFiles/app.dir/src/cpp/Entity/Entity.cpp.o.d"
   "/home/kacper/cpp/zeroheaven/src/cpp/Entity/player/Player.cpp" "CMakeFiles/app.dir/src/cpp/Entity/player/Player.cpp.o" "gcc" "CMakeFiles/app.dir/src/cpp/Entity/player/Player.cpp.o.d"
   "/home/kacper/cpp/zeroheaven/src/cpp/Entity/player/playerHandling.cpp" "CMakeFiles/app.dir/src/cpp/Entity/player/playerHandling.cpp.o" "gcc" "CMakeFiles/app.dir/src/cpp/Entity/player/playerHandling.cpp.o.d"
+  "/home/kacper/cpp/zeroheaven/src/cpp/Map/Map.cpp" "CMakeFiles/app.dir/src/cpp/Map/Map.cpp.o" "gcc" "CMakeFiles/app.dir/src/cpp/Map/Map.cpp.o.d"
+  "/home/kacper/cpp/zeroheaven/src/cpp/Map/Platform.cpp" "CMakeFiles/app.dir/src/cpp/Map/Platform.cpp.o" "gcc" "CMakeFiles/app.dir/src/cpp/Map/Platform.cpp.o.d"
   "/home/kacper/cpp/zeroheaven/src/cpp/Settings.cpp" "CMakeFiles/app.dir/src/cpp/Settings.cpp.o" "gcc" "CMakeFiles/app.dir/src/cpp/Settings.cpp.o.d"
   "/home/kacper/cpp/zeroheaven/src/cpp/Structures/Structures.cpp" "CMakeFiles/app.dir/src/cpp/Structures/Structures.cpp.o" "gcc" "CMakeFiles/app.dir/src/cpp/Structures/Structures.cpp.o.d"
   "/home/kacper/cpp/zeroheaven/src/cpp/event.cpp" "CMakeFiles/app.dir/src/cpp/event.cpp.o" "gcc" "CMakeFiles/app.dir/src/cpp/event.cpp.o.d"
