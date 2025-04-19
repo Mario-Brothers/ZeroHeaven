@@ -19,6 +19,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/kacper/cpp/zeroheaven/src/cpp/event.cpp" "CMakeFiles/app.dir/src/cpp/event.cpp.o" "gcc" "CMakeFiles/app.dir/src/cpp/event.cpp.o.d"
   "/home/kacper/cpp/zeroheaven/src/cpp/init.cpp" "CMakeFiles/app.dir/src/cpp/init.cpp.o" "gcc" "CMakeFiles/app.dir/src/cpp/init.cpp.o.d"
   "/home/kacper/cpp/zeroheaven/src/cpp/main.cpp" "CMakeFiles/app.dir/src/cpp/main.cpp.o" "gcc" "CMakeFiles/app.dir/src/cpp/main.cpp.o.d"
+  "" "app" "gcc" "CMakeFiles/app.dir/link.d"
   )
 
 # Targets to which this target links which contain Fortran sources.
